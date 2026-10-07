@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>سيفر تابو | Sefer Taboo</title>
+  <meta name="description" content="مساحة توعوية تبحث في الجانب الخفي من القضايا والظواهر التي تستحق التوقف عندها: جرائم غامضة، قصص واقعية، وأمن رقمي.">
+  <meta property="og:title" content="سيفر تابو | Sefer Taboo">
+  <meta property="og:image" content="banner.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23170f0e'/%3E%3Ccircle cx='32' cy='27' r='13' fill='%23b3261e'/%3E%3Cpath d='M28 36h8l3 18H25z' fill='%23b3261e'/%3E%3Ccircle cx='32' cy='27' r='5' fill='%23170f0e'/%3E%3Cpath d='M30 28h4l2 14h-8z' fill='%23170f0e'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #170f0e;
+      --card: #231615;
+      --ink: #f1ddd7;
+      --muted: #b49a93;
+      --accent: #b3261e;
+      --accent-text: #e0584c;
+      --line: #3b2724;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Amiri, "Libre Caslon Text", Tahoma, serif;
+      font-size: 1.15rem;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.9;
+    }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid var(--accent-text); outline-offset: 3px; }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 0 1.25rem; }
+    header { position: absolute; inset: 0 0 auto 0; z-index: 2; }
+    header .wrap { display: flex; justify-content: flex-end; padding-top: 1rem; }
+    nav a { margin-inline-start: 1.25rem; text-decoration: none; text-shadow: 0 1px 6px #000; }
+    nav a:hover { color: var(--accent-text); }
+
+    .banner { position: relative; background: #000; }
+    .banner img { display: block; width: 100%; height: auto; max-height: 82vh; object-fit: cover; }
+    .banner::after {
+      content: ""; position: absolute; inset: auto 0 0 0; height: 30%;
+      background: linear-gradient(transparent, var(--bg));
+    }
+    .cta { text-align: center; padding: 1.5rem 0 3rem; }
+    .lead { max-width: 30em; margin: 0 auto 1.5rem; color: var(--muted); font-size: 1.25rem; }
+    .btn {
+      display: inline-block; padding: .65rem 1.8rem; border-radius: 4px;
+      background: var(--accent); color: #fff; font-weight: 700; text-decoration: none;
+      font-family: inherit; font-size: 1.15rem;
+    }
+    .btn:hover { background: #cf3027; }
+
+    section { padding: 2.5rem 0; border-top: 1px solid var(--line); }
+    h2 { margin: 0 0 1.25rem; font-size: 1.8rem; color: var(--accent-text); }
+    .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .video { display: block; text-decoration: none; background: var(--card); border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
+    .video:hover { border-color: var(--accent); }
+    .thumb { aspect-ratio: 16 / 9; background: #0e0807; display: grid; place-items: center; color: var(--muted); font-size: .95rem; }
+    .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .video .body { padding: .8rem 1rem 1rem; }
+    .video h3 { margin: 0; font-size: 1.2rem; line-height: 1.6; }
+    .meta { color: var(--muted); font-size: .95rem; }
+    .post { padding: 1.1rem 0; border-bottom: 1px solid var(--line); }
+    .post:last-child { border-bottom: 0; }
+    .post h3 { margin: 0; font-size: 1.35rem; }
+    .post h3 a { text-decoration: none; }
+    .post h3 a:hover { color: var(--accent-text); }
+    .post p { margin: .3rem 0 0; color: var(--muted); max-width: 38em; }
+    .motto { color: var(--accent-text); font-size: 1.3rem; font-weight: 700; margin-top: 1.5rem; }
+    footer { border-top: 1px solid var(--line); padding: 2rem 0 3rem; color: var(--muted); }
+    footer a { margin-inline-end: 1.25rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <a href="#videos">الفيديوهات</a>
+        <a href="#blog">المدونة</a>
+        <a href="#about">عن القناة</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="banner">
+    <img src="banner.jpg" alt="شعار قناة Sefer Taboo">
+  </div>
+
+  <main class="wrap">
+    <div class="cta">
+      <p class="lead">مساحة توعوية تبحث في الجانب الخفي من القضايا والظواهر التي تستحق التوقف عندها.</p>
+      <!-- غيّر الرابط التالي إلى رابط قناتك -->
+      <a class="btn" href="https://www.youtube.com/@your-channel?sub_confirmation=1" target="_blank" rel="noopener">اشترك في القناة</a>
+    </div>
+
+    <section id="videos">
+      <h2>أحدث الفيديوهات</h2>
+      <div class="grid">
+        <!-- لكل فيديو: غيّر VIDEO_ID والعنوان والتاريخ -->
+        <a class="video" href="https://www.youtube.com/watch?v=VIDEO_ID_1" target="_blank" rel="noopener">
+          <div class="thumb">صورة الفيديو</div>
+          <div class="body"><h3>عنوان الفيديو الأول</h3><span class="meta">أكتوبر 2026</span></div>
+        </a>
+        <a class="video" href="https://www.youtube.com/watch?v=VIDEO_ID_2" target="_blank" rel="noopener">
+          <div class="thumb">صورة الفيديو</div>
+          <div class="body"><h3>عنوان الفيديو الثاني</h3><span class="meta">سبتمبر 2026</span></div>
+        </a>
+        <a class="video" href="https://www.youtube.com/watch?v=VIDEO_ID_3" target="_blank" rel="noopener">
+          <div class="thumb">صورة الفيديو</div>
+          <div class="body"><h3>عنوان الفيديو الثالث</h3><span class="meta">سبتمبر 2026</span></div>
+        </a>
+      </div>
+    </section>
+
+    <section id="blog">
+      <h2>آخر المقالات</h2>
+      <article class="post">
+        <h3><a href="#">عنوان المقال الأول</a></h3>
+        <span class="meta">2 أكتوبر 2026</span>
+        <p>ملخص قصير من سطرين عن موضوع المقال.</p>
+      </article>
+      <article class="post">
+        <h3><a href="#">عنوان المقال الثاني</a></h3>
+        <span class="meta">25 سبتمبر 2026</span>
+        <p>ملخص قصير من سطرين عن موضوع المقال.</p>
+      </article>
+    </section>
+
+    <section id="about">
+      <h2>عن القناة</h2>
+      <p>مساحة توعوية تبحث في الجانب الخفي من القضايا والظواهر التي تستحق التوقف عندها، من الجرائم الغامضة والتحقيقات والقصص الواقعية، إلى الأمن الرقمي والمخاطر التي يفرضها العالم الحديث.</p>
+      <p>نقدم قصصاً وتحليلات مبسطة تجمع بين السرد الوثائقي وإعادة بناء الأحداث، بهدف طرح الأسئلة، وفهم ما حدث، واستخلاص الدروس التي تساعدنا على حماية أنفسنا ومجتمعاتنا.</p>
+      <p>لسنا هنا لصناعة الإثارة من أجل الإثارة، بل لفتح مساحة للتفكير والوعي، وسط عالم تتزايد فيه المعلومات، وتتداخل فيه الحقيقة مع الشائعة، وتظهر فيه المخاطر أحياناً في أماكن لا نتوقعها.</p>
+      <p class="motto">سيفر تابو... نفتح الملفات، ونترك لك مساحة التفكير.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>
+        <a href="https://www.youtube.com/@your-channel" target="_blank" rel="noopener">يوتيوب</a>
+        <a href="mailto:example@example.com">البريد الإلكتروني</a>
+      </p>
+      <small>© 2026 سيفر تابو | Sefer Taboo</small>
+    </div>
+  </footer>
+</body>
+</html>
